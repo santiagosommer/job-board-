@@ -16,9 +16,9 @@ import logger from './logger.js';
 
 // Constants
 const app = express();
-const port = 5174;
+const port = 3000;
 const esClient = new Client({
-    node: 'http://localhost:9200',
+    node: 'http://elasticsearch:9200',
 })
 
 
@@ -233,6 +233,6 @@ app.post('/jobs/apply', (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     logger.info(`Listening on port ${port}`);
 });

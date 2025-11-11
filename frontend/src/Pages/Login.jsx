@@ -6,7 +6,7 @@ function Login() {
     const onSubmit = async (data) => {
         try {
             console.log(data);
-            const response = await fetch("http://localhost:5174/users/login", {
+            const response = await fetch("http://localhost:3000/users/login", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",

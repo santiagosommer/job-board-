@@ -4,8 +4,11 @@ import { Link } from "react-router";
 
 function createUser(user) {
     return (
-        <div key={user.id}>
-            {user.email}
+        <div >
+            <li key={user.id}>
+                {user.email}
+
+            </li>
         </div>
     )
 }
@@ -15,11 +18,11 @@ function Home() {
 
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
-    const { data: users, error: errorUsers } = useFetch("http://localhost:5174/users");
+    const { data: users, error: errorUsers } = useFetch("http://localhost:3000/users");
 
     const search = async () => {
         try {
-            const response = await fetch(`http://localhost:5174/jobs/search?query=${query}`);
+            const response = await fetch(`http://localhost:3000/jobs/search?query=${query}`);
             if (!response.ok) throw new Error("Error while searching");
             const data = await response.json();
             setResults(data);

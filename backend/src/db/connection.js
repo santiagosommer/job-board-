@@ -12,7 +12,7 @@ const db = mysql.createPool({
     database: process.env.DB_NAME,
 });
 
-// createTables(db);
+createTables(db);
 
 
 export default db;

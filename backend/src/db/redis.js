@@ -4,7 +4,7 @@ import logger from '../logger.js';
 const PORT = 6379;
 
 const redis = new Redis({
-    host: 'localhost',
+    host: 'redis',
     port: PORT,
 });
 

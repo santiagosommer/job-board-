@@ -5,7 +5,7 @@ function CreateJob() {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch("http://localhost:5174/jobs/create", {
+            const response = await fetch("http://localhost:3000/jobs/create", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
