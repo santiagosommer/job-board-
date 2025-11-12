@@ -28,7 +28,6 @@ app.use(cors());
 app.use(express.json());
 
 // ElasticSearch
-// TODO create job hash function
 async function addEsJob(newJob) {
     const id = crypto.createHash('md5')
         .update(`${newJob.title}-${newJob.company}-${newJob.location}`)
@@ -54,6 +53,7 @@ app.get('/users', async (req, res) => {
     const rows = getUsers();
     const users = await rows;
     res.json(users);
+
 });
 
 
@@ -203,7 +203,7 @@ app.get('/jobs/search', async (req, res) => {
 
     } catch (err) {
         logger.error(err)
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: 'Error while searching' });
     }
 });
 

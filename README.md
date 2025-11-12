@@ -6,6 +6,11 @@
 
 Make sure you have **Docker** and **Docker Compose** installed
 
+Build and run containers:
+```bash
+- docker compose up -d --build
+```
+
 Run containers:
 ```bash
 - npm run docker:up

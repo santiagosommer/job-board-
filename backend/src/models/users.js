@@ -31,6 +31,6 @@ export async function getUser(email) {
 }
 
 export async function getUsers() {
-    const [rows] = await db.query('SELECT email FROM users');
+    const [rows] = await db.query('SELECT id, email FROM users');
     return rows;
 }
