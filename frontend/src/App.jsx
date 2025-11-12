@@ -1,4 +1,3 @@
-import './App.css';
 import Home from './Pages/Home.jsx'
 import Login from './Pages/Login.jsx'
 import Signup from './Pages/Signup.jsx'
