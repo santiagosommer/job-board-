@@ -1,4 +1,4 @@
-function JobList({ users }) {
+function UsersList({ users }) {
     return (
         <>
             <h2>Users</h2>
@@ -12,4 +12,4 @@ function JobList({ users }) {
     )
 }
 
-export default JobList;
+export default UsersList;
